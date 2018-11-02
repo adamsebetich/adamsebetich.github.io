@@ -1,0 +1,18 @@
+<div class="container" id="WebBanner2"> 
+	<h1>Dawg Coffee<br>{{bean.name}}</h1>
+	<p>Caffeinating Sleepy Huskies Since 2015</p>
+</div>
+GO DAGS
+<h2><center>{{bean.name}}</center></h2>
+
+<p><center><img src={{bean.image}}  alt="beans" style="width:25%;height:25%px;"></center></p>
+<p><center>{{bean.description}}</center></p>
+<div class="container" id="grower">
+<h3><center>About the grower {{bean.grower.name}}</center></h3>
+<p>{{bean.grower.description}}</p>
+<p><center><img src={{bean.grower.image}} style="width:25%;height:25%px;"></center></p>
+<p><center><a href={{bean.grower.externalUrl}}>CLICK HERE TO LEARN MORE!</a></center></p>
+
+<a class="form-inline pull-right" ui-sref="shoppingCart"><h2>Shopping-Cart</h2></a>
+
+

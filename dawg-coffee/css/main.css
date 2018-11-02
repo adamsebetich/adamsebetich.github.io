@@ -1,0 +1,226 @@
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300italic);	
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+body {
+	font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+   	font-weight: 300; 
+   	font-size: 16px;
+   	background-color: #E9EAEE;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Raleway, 'Helvetica Neue', Helvetica, sans-serif;
+}
+h2 {
+	color: #bc6026;
+}
+
+
+nav {
+	background-color: #181c22;
+    position: fixed;
+    z-index: 1;
+    padding-left: 15px;
+    width: 100%;
+}
+nav a {
+	color: white;
+	font-size: 16px;
+	padding: 0.5em;
+	font-variant: small-caps;
+	text-decoration: none;
+}
+nav a:hover{
+	text-decoration: none;
+	color: #d87e28;
+}
+nav a svg {
+	fill: white;
+}
+
+#Coming {
+	text-align: left;
+}
+
+#WebBanner {
+	padding-top: 3em;
+	width: 100%;
+	padding-right: 3em;
+}
+#WebBanner2 { 
+	padding-top: 3em;
+	width: 100%;
+	padding-right: 3em;
+}
+#WebBanner2 p {
+	display: none;
+}
+#WebBanner p {
+	display: none;
+}
+#WebHead {
+	font-style: italic;
+}
+#WebHead svg {
+	display: none;
+	fill: #d87e28;
+}
+
+
+#Information {
+	text-align: center;
+	background-color: #dbdce3;
+	width: 100%;
+	padding-top: 1em;
+}
+#Information svg {
+	fill: #d87e28;
+	height: 25px;
+	margin-bottom: 1em;
+}
+#Information .Map {
+	border-radius: 5px;
+}
+
+
+#Menu dd {
+	padding-left: 1em;
+	font-size: 16px;
+	font-style: italic;
+}
+
+
+#Story {
+	width: 100%;
+	padding-bottom: 1em;
+	background-color: #dbdce3;
+}
+
+#Story p {
+	display: inline; 
+}
+
+#beans {
+	float:left;
+}
+​#purchase p{
+	text-align: center;	
+}
+
+
+.girl {
+	max-height: 300px;
+	margin-left: 1em;
+	border-radius: 5px;
+	float: right;
+}
+
+footer {
+	font-size: 12px;
+	border-top: 3px solid #d87e28;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: #afb3c2;
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		font-size: 20px;
+   		background-color: #E9EAEE;		
+	}
+	h2 {
+		text-align: center;
+	}
+	nav {
+		background-color: rgba(24, 28, 34, 0.8);
+	}
+	nav a {
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+	#WebBanner {
+		background-image: url("../img/background-sm.jpg");
+		background-repeat: no-repeat;
+		min-height: 550px;
+		color: white;
+		text-align: right;
+	}
+	#WebBanner2 {
+		background-image: url("../img/background-sm.jpg");
+		background-repeat: no-repeat;
+		min-height: 225px;
+		color: white;
+		text-align: right;
+	}
+	#WebBanner p {
+		display: block;
+		padding-bottom: 3em;
+	}
+	#WebBanner2 p {
+		display: block;
+		padding-bottom: 3em;
+	}
+
+	#WebHead svg {
+		display: block;
+		margin: auto;
+		height: 1.5em;
+		margin-bottom: 1em;
+	}
+	#WebHead {
+		display: block;
+		text-align: center;
+		font-size: 1.25em;
+		padding-top: 3em;
+		padding-bottom: 3em;
+	}
+	.girl {
+		max-height: 400px;
+	}
+
+	footer #leftFooter {
+		background-color: #afb3c2;
+	}
+
+	
+	footer #rightFooter {
+		text-align: right;
+		background-color: #afb3c2;
+	}
+}
+
+
+@media screen and (min-width: 992px) {
+	#WebBanner {
+		background-image: url("../img/background-md.jpg");
+		background-repeat: no-repeat;
+	}
+	#WebBanner2 {
+		background-image: url("../img/background-md.jpg");
+		background-repeat: no-repeat;
+	}	
+	#WebBanner h1 {
+		font-size: 4em;
+	}
+	#WebBanner2 h1 {
+		font-size: 4em;
+	}
+	#Information {
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#WebBanner {
+		background-image: url("../img/background-lg.jpg");	
+	}
+	#WebBanner2 {
+		background-image: url("../img/background-lg.jpg");	
+	}
+}
+

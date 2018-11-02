@@ -1,0 +1,22 @@
+<div class="container" id="WebBanner2"> 
+	<h1>Dawg Coffee<br>Orders</h1>
+	<p>Caffeinating Sleepy Huskies Since 2015</p>
+</div>
+
+<h3>Search for a bean</h3>
+<div class="container">
+	<label for="search"><i class="fa fa-search"></i></label>
+	<input name="query" placeholder="Type Here" id="search" ng-model="searchQuery">
+</div>
+<table class="table">
+	<tr>
+		<th><a href="" ng-click="sortingCriteria='name'"><h3><center>Name</center></h3></a></th>
+		<th><a href="" ng-click="sortingCriteria='price'"><h3><center>Price</center></h3></a></th>
+</table>
+<div class="container items" ng-repeat="bean in app | orderBy:sortingCriteria | filter:searchQuery">	
+	<div class="beans .col-md-4">
+		<h2><a ui-sref="bean-id({id:bean.id})">{{bean.name}}</a></h2>
+		<p><center>{{bean.description}}</center></p>
+		<p><center>{{bean.price | currency:'$'}}/per pound</center></p>
+	</div>
+</div>
