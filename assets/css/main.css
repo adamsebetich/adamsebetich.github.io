@@ -660,7 +660,7 @@ table.alt tbody tr td {
 /* Highlights */
 .highlights {
   width: 100%;
-  margin: 2.5rem 0;
+  margin: 1rem 0;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -1780,7 +1780,7 @@ ul.icons {
 
 /* Wrapper */
 .wrapper {
-  padding: 8rem 0 6rem 0 ;
+  padding: 4rem 0 4rem 0 ;
   position: relative;
   z-index: 1; }
   @media screen and (max-width: 1280px) {
@@ -2208,7 +2208,7 @@ ul.icons {
 #footer {
   background-color: #111111;
   color: rgba(255, 255, 255, 0.5);
-  padding: 8rem 0 6rem 0 ; }
+  padding: 2rem 0 0.25rem 0 ; }
   #footer input, #footer select, #footer textarea {
     color: #ffffff; }
   #footer a {
@@ -2357,14 +2357,14 @@ ul.icons {
       #footer .content section:last-child {
         padding-left: 4rem; }
   #footer .copyright {
-    border-top: 1px solid;
-    font-size: 0.8rem;
-    opacity: 0.5;
+    border-top: 7px solid;
+    font-size: 1rem;
+    opacity: 1;
     padding: 2rem 0;
     text-align: center; }
   @media screen and (max-width: 1280px) {
     #footer {
-      padding: 4rem 0 2rem 0 ; } }
+      padding: 3rem 0 2rem 0 ; } }
   @media screen and (max-width: 980px) {
     #footer .content {
       -moz-flex-wrap: wrap;
@@ -2389,7 +2389,7 @@ ul.icons {
 
 /* Header */
 body {
-  padding-top: 3.25rem; }
+  padding-top: 2rem 0 2rem 0; }
   body:before {
     content: ' ';
     background-image: url(../../images/bg.jpg);
