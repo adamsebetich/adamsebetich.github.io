@@ -1,2 +1,0 @@
-# adamsebetich.github.io
-Eh?
