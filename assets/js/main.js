@@ -1,5 +1,5 @@
 /*
-	Snapshot by TEMPLATED
+	Urban by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
@@ -7,17 +7,19 @@
 (function($) {
 
 	skel.breakpoints({
-		xlarge: '(max-width: 1680px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)'
+		xlarge:	'(max-width: 1680px)',
+		large:	'(max-width: 1280px)',
+		medium:	'(max-width: 980px)',
+		small:	'(max-width: 736px)',
+		xsmall:	'(max-width: 480px)'
 	});
 
 	$(function() {
 
 		var	$window = $(window),
-			$body = $('body');
+			$body = $('body'),
+			$header = $('#header'),
+			$banner = $('#banner');
 
 		// Disable animations/transitions until the page has loaded.
 			$body.addClass('is-loading');
@@ -39,64 +41,121 @@
 				);
 			});
 
-		// Scrolly.
-			$('.scrolly').scrolly();
+		// Menu.
+			$('#menu')
+				.append('<a href="#menu" class="close"></a>')
+				.appendTo($body)
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'right'
+				});
 
-		// Gallery.
-			$('.gallery').each(function() {
+		// Header.
+			if (skel.vars.IEVersion < 9)
+				$header.removeClass('alt');
 
-				var	$gallery = $(this),
-					$content = $gallery.find('.content');
+			if ($banner.length > 0
+			&&	$header.hasClass('alt')) {
 
-				// Poptrox.
-					$content.poptrox({
-						usePopupCaption: true
-					});
+				$window.on('resize', function() { $window.trigger('scroll'); });
 
-				// Tabs.
-					$gallery.each( function() {
+				$banner.scrollex({
+					bottom:		$header.outerHeight(),
+					terminate:	function() { $header.removeClass('alt'); },
+					enter:		function() { $header.addClass('alt'); },
+					leave:		function() { $header.removeClass('alt'); $header.addClass('reveal'); }
+				});
 
-						var $this = $(this),
-							$tabs = $this.find('.tabs a'),
-							$media = $this.find('.media');
+			}
 
-						$tabs.on('click', function(e) {
+		// Banner.
+			var $banner = $('#banner');
 
-							var $this = $(this),
-								tag = $this.data('tag');
+			if ($banner.length > 0) {
 
-							// Prevent default.
-							 	e.preventDefault();
+				// IE fix.
+					if (skel.vars.IEVersion < 12) {
 
-							// Remove active class from all tabs.
-								$tabs.removeClass('active');
+						$window.on('resize', function() {
 
-							// Reapply active class to current tab.
-								$this.addClass('active');
+							var wh = $window.height() * 0.60,
+								bh = $banner.height();
 
-							// Hide media that do not have the same class as the clicked tab.
-								$media
-									.fadeOut('fast')
-									.each(function() {
+							$banner.css('height', 'auto');
 
-										var $this = $(this);
+							window.setTimeout(function() {
 
-										if ($this.hasClass(tag))
-											$this
-												.fadeOut('fast')
-												.delay(200)
-												.queue(function(next) {
-													$this.fadeIn();
-													next();
-												});
+								if (bh < wh)
+									$banner.css('height', wh + 'px');
 
-									});
+							}, 0);
 
 						});
 
-					});
+						$window.on('load', function() {
+							$window.triggerHandler('resize');
+						});
 
+					}
 
+				// Video check.
+					var video = $banner.data('video');
+
+					if (video)
+						$window.on('load.banner', function() {
+
+							// Disable banner load event (so it doesn't fire again).
+								$window.off('load.banner');
+
+							// Append video if supported.
+								if (!skel.vars.mobile
+								&&	!skel.breakpoint('large').active
+								&&	skel.vars.IEVersion > 9)
+									$banner.append('<video autoplay loop><source src="' + video + '.mp4" type="video/mp4" /><source src="' + video + '.webm" type="video/webm" /></video>');
+
+						});
+
+				// More button.
+					$banner.find('.more')
+						.addClass('scrolly');
+
+			}
+
+		// Tabs.
+			$('.flex-tabs').each( function() {
+
+				var t = jQuery(this),
+					tab = t.find('.tab-list li a'),
+					tabs = t.find('.tab');
+
+				tab.click(function(e) {
+
+					var x = jQuery(this),
+						y = x.data('tab');
+
+					// Set Classes on Tabs
+						tab.removeClass('active');
+						x.addClass('active');
+
+					// Show/Hide Tab Content
+						tabs.removeClass('active');
+						t.find('.' + y).addClass('active');
+
+					e.preventDefault();
+
+				});
+
+			});
+
+		// Scrolly.
+			$('.scrolly').scrolly({
+				offset: function() {
+					return $header.height() - 2;
+				}
 			});
 
 	});
