@@ -2920,6 +2920,7 @@
 
 	#banner {
 		padding: 14em 0 12em 0;
+		filter: grayscale(100%);
 		background-image: url(../../images/background.jpg); 
 		background-size: cover;
 		background-position: center top;
