@@ -2122,10 +2122,10 @@
 			width: 100%;
 		}
 
-			.image.fit img {
+			/*.image.fit img {
 				width: 100%;
 			}
-
+*/
 		.image.round img {
 			border-radius: 100%;
 		}
