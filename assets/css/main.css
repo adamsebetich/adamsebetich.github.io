@@ -1989,8 +1989,8 @@
 
 		input[type="checkbox"]:checked + label:before,
 		input[type="radio"]:checked + label:before {
-			background: #f6755e;
-			border-color: #f6755e;
+			background: #191970;
+			border-color: #191970;
 			color: #ffffff;
 			content: '\f00c';
 		}
@@ -2396,7 +2396,7 @@
 		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		background-color: #f6755e;
+		background-color: #191970;
 		border-radius: 4px;
 		border: 0;
 		color: #ffffff;
@@ -2630,7 +2630,7 @@
 		}
 
 		.wrapper.style1 {
-			background: #f6755e;
+			background: #191970;
 			color: #fcdcd6;
 		}
 
@@ -2683,7 +2683,7 @@
 	}
 
 		#header .logo {
-			color: #f6755e;
+			color: #191970;
 			font-family: "Pacifico", cursive;
 			font-size: 2.5em;
 			letter-spacing: 2px;
@@ -3147,7 +3147,7 @@
 		}
 
 		#footer .icon {
-			color: #f6755e;
+			color: #191970;
 		}
 
 		#footer a {
