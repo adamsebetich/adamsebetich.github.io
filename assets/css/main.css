@@ -1586,7 +1586,7 @@
 
 	body {
 		background-color: #fff;
-		color: #999999;
+		color: #708090;
 	}
 
 	body, input, select, textarea {
@@ -1607,7 +1607,7 @@
 		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 20pt;
 			}
 
 		}
@@ -1805,7 +1805,7 @@
 	}
 
 	a {
-		color: #999999;
+		color: #708090;
 	}
 
 		a:hover {
@@ -2391,7 +2391,7 @@
 
 	input[type="checkbox"] + label,
 	input[type="radio"] + label {
-		color: #999999;
+		color: #708090;
 	}
 
 		input[type="checkbox"] + label:before,
@@ -2896,7 +2896,7 @@
 
 		.wrapper.style1 {
 			background-color: #fafafa;
-			color: #999999;
+			color: #708090;
 		}
 
 			.wrapper.style1 input, .wrapper.style1 select, .wrapper.style1 textarea {
@@ -3032,7 +3032,7 @@
 
 			.wrapper.style1 input[type="checkbox"] + label,
 			.wrapper.style1 input[type="radio"] + label {
-				color: #999999;
+				color: #708090;
 			}
 
 				.wrapper.style1 input[type="checkbox"] + label:before,
@@ -3116,7 +3116,7 @@
 			}
 
 			.wrapper.style2 a {
-				color: #999999;
+				color: #708090;
 			}
 
 				.wrapper.style2 a:hover {
@@ -3577,6 +3577,7 @@
 		max-width: 80%;
 		overflow-y: auto;
 		padding: 3em 2em;
+		font-size: 150%;
 		position: fixed;
 		right: 0;
 		top: 0;
@@ -3705,7 +3706,7 @@
 		-webkit-justify-content: center;
 		-ms-justify-content: center;
 		justify-content: center;
-		background-image: url("../../images/banner.jpg");
+		background-image: url("../../images/background.jpeg");
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
